@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<html>
+	<head>
+		<title>Fibonacci series in pure JavaScript</title>
+	<script>
+    var var1=0;
+    var var2 = 1;
+    var var3;
+    var var4 = prompt("Please enter a firstnumber");
+    var var5 = prompt("Please enter a secondnumber");
+
+    var num = 1000;
+
+    /*  document.write(var1+"<br />");
+    document.write(var2+"<br />"); 
+ */
+    for(var i=2; i <num;++i)
+    {
+    	/* var3=0+1
+    	var1=1
+    	var2=1 */
+        var3 = var1 + var2;
+        var1 = var2;
+        var2 = var3;
+
+       if (var3>=var4&&var3<=var5)
+        
+        document.write(var3+"<br />");
+    }
+</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

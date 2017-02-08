@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script>
+var str = prompt("Please enter your name", "Enter the input!!");
+String.prototype.str_reverse= function(){
+ return this.split('').reverse().join('');
+}
+
+var arr = str.split(" ");
+for(var i=0; i<arr.length; i++){
+ arr[i] = arr[i].str_reverse();
+}
+document.write(arr.join(" "))
+alert(arr.join(" "))
+</script>
+<body>
+
+</body>
+</html>

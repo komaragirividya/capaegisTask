@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<!--  <body onload="createBtn()">
+    <div id="demo"></div>
+</body>
+<script>
+
+        function createBtn() {
+            var x = document.getElementById('demo');
+            createButton(x, head);
+        }
+        
+        function createButton(x, n) {
+            var btn = document.createElement('button');
+            btn.innerHTML = n;
+           
+            btn.onclick = function () { btnClick(this, x); };
+
+            x.appendChild(btn);
+        }
+
+        function btnClick(element, x) {
+
+            var name = element.innerText;
+
+            createButton(x, name + '.1');
+            createButton(x, name + '.2');
+
+            x.removeChild(element);
+        };
+
+        
+
+    </script>  --> 
+ <body onload='createBtn()'>
+
+<h1>Hydra button</h1>
+    <p>Click the button to make a two buttons</p>
+
+    <script>
+        var removeAndCreateMore = function() 
+        {
+           
+            document.body.removeChild(this);
+            console.log(this);
+
+            createBtn();
+            createBtn();
+        };
+
+        var btnIdx = 0;
+        var createBtn = function createBtn() 
+        {
+            
+
+            var btn = document.createElement("BUTTON");
+            var t = document.createTextNode(btnIdx++);
+            btn.appendChild(t);
+            btn.onclick = removeAndCreateMore;
+
+            document.body.appendChild(btn);
+        }
+    </script>
+
+</body> 
+</html>
